@@ -1,0 +1,70 @@
+@stylobate {
+    @data url("data.json");
+
+    skin > [islands-button] {
+        font-family: Arial, sans-serif;
+        border-radius: 3px;
+    }
+
+    skin > [islands-button]::defaults {
+        hover: '&:hover' red
+    }
+
+    skin > [islands-button] + :not([content]) {
+        position: relative;
+        border: 1px solid;
+    }
+
+    skin > [islands-button] > [reset] {
+        kind: button;
+    }
+
+    skin > [islands-button] > [color] {
+        color: #000; /* need color value getter or variable */
+    }
+
+    skin > [islands-button] > [size=small] {
+        padding: 0 9px;
+        line-height: 20px;
+        font-size: $islands_text_s;
+    }
+
+    skin > [islands-button] > [size=medium] {
+        padding: 0 12px;
+        line-height: 26px;
+        font-size: $islands_text_s;
+    }
+
+    skin > [islands-button] > [size=large] {
+        padding: 0 14px;
+        line-height: 30px;
+        font-size: $islands_text_m;
+    }
+
+    skin > [islands-button] > [theme=normal] + [hover] {
+        border-color: rgba(#000, 0.4);
+    }
+
+    skin > [islands-button] > [theme=action] + [hover] {
+        border-color: #BF9900;
+    }
+
+    skin > [islands-button] > [focus] {
+        border-color: rgba(178,142,0,.6);
+        outline: none;
+    }
+
+    skin > [islands-button] > [focus] > [helper] {
+        content: "";
+
+        kind: fill;
+
+        border-radius: inherit;
+        box-shadow: 0 0 10px #FC0;
+    }
+
+}
+
+a {
+    skin: button;
+}

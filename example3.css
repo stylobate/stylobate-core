@@ -1,0 +1,73 @@
+@stylobate {
+    @data url("data.json");
+
+    @stylobate-property skin {
+        @stylobate-param islands-button {
+            font-family: Arial, sans-serif;
+            border-radius: 3px;
+
+            ::defaults {
+                hover: '&:hover' red
+            }
+
+            :not([content]) {
+                position: relative;
+                border: 1px solid;
+            }
+
+            [reset] {
+                kind: button;
+            }
+
+            [color] {
+                color: #000; /* need color value getter or variable */
+            }
+
+            [size=small] {
+                padding: 0 9px;
+                line-height: 20px;
+                font-size: $islands_text_s;
+            }
+
+            [size=medium] {
+                padding: 0 12px;
+                line-height: 26px;
+                font-size: $islands_text_s;
+            }
+
+            [size=large] {
+                padding: 0 14px;
+                line-height: 30px;
+                font-size: $islands_text_m;
+            }
+
+            [theme=normal] + [hover] {
+                border-color: rgba(#000, 0.4);
+            }
+
+            [theme=action] + [hover] {
+                border-color: #BF9900;
+            }
+
+            [focus] {
+                border-color: rgba(178,142,0,.6);
+                outline: none;
+            }
+
+            [focus] > [helper] {
+                content: "";
+
+                kind: fill;
+
+                border-radius: inherit;
+                box-shadow: 0 0 10px #FC0;
+            }
+
+        }
+    }
+
+}
+
+a {
+    skin: button;
+}
