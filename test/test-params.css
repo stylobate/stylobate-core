@@ -1,0 +1,21 @@
+.test-with-param {
+    height: 20px;
+    padding: 10px;
+}
+
+.test-with-param-on-hover {
+    height: 20px;
+}
+
+.test-with-param-on-hover:hover {
+    padding: 10px;
+}
+
+.test-with-only-param {
+    padding: 10px;
+}
+
+.test-with-only-param-2 {
+    padding: 10px;
+}
+/*# sourceMappingURL=test-params.css.map */

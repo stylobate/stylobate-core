@@ -1,0 +1,12 @@
+@stylobate skin {
+    @test-simple {
+        width: 10px;
+        height: 20px;
+    }
+}
+
+.test-simple {
+    position: absolute;
+    skin: test-simple;
+    color: red;
+}

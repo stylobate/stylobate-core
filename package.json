@@ -1,0 +1,17 @@
+{
+  "name": "stylobate",
+  "dependencies": {
+    "postcss": "git://github.com/postcss/postcss.git#tokenizer"
+  },
+  "devDependencies": {
+    "glob": "3.2.x",
+    "mocha": "1.20.x",
+    "should": "2.0.x"
+  },
+  "config": {
+    "whatToTest": ""
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha ./test/run.js --require should --reporter list --timeout 4000"
+  }
+}

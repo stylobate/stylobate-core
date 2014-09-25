@@ -1,0 +1,25 @@
+@stylobate skin {
+    @test-param {
+        height: 20px;
+
+        [param] {
+            padding: 10px;
+        }
+    }
+}
+
+.test-with-param {
+    skin: test-param param;
+}
+
+.test-with-param-on-hover {
+    skin: test-param (param '&:hover');
+}
+
+.test-with-only-param {
+    skin: test-param_param;
+}
+
+.test-with-only-param-2 {
+    skin: test-param_ param;
+}
