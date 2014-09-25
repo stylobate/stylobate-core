@@ -9,9 +9,10 @@ glob.sync("./test/*" + whatToTest + "*.stylobate.css").forEach(function(test){
     it(name, function(){
         var source = fs.readFileSync(test, 'utf8').replace(/\r/g, '').trim();
         var expected_css = fs.readFileSync(test.replace('.stylobate.css', '.css'), 'utf8').replace(/\r/g, '').trim();
-        var stylobated_css = stylobate(source);
+        var stylobated_css = stylobate(source, {
+            from: test
+        });
         var result = stylobated_css.toResult({
-            from: test.replace('./test/', ''),
             to: test.replace('.stylobate.css', '.css'),
             map: true
         });
